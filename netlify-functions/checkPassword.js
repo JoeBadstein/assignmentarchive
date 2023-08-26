@@ -10,7 +10,7 @@ exports.handler = async function(event, context) {
     } else {
       return {
         statusCode: 403,
-        body: JSON.stringify({ status: "forbidden" })
+        body: JSON.stringify({ status: "forbidden, try: "+envPassword })
       };
     }
   };

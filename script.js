@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
           window.location.href = '/success';
         } else {
           errorMessage.style.display = 'block';
-          errorMessage.textContent = 'Incorrect password';
-          alert("The correct password is: moti");  // Show alert with correct password
+          errorMessage.textContent = 'Incorrect password'+ response.status;
+          alert(response.body);  // Show alert with correct password
         }
     }
   });

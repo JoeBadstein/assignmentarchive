@@ -9,16 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   
     async function checkPassword() {
-      const input = passwordInput.value;
-      const response = await fetch(`/.netlify/functions/checkPassword?password=${input}`);
-      
-      if (response.status === 200) {
-        sessionStorage.setItem("password", input);
-        window.location.href = 'success.html';
-      } else {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Incorrect password';
-      }
+        const input = passwordInput.value;
+        const response = await fetch(`/.netlify/functions/checkPassword?password=${input}`);
+        
+        if (response.status === 200) {
+            sessionStorage.setItem("password", input);
+            window.location.href = '/success';
+        } else {
+            errorMessage.style.display = 'block';
+            errorMessage.textContent = 'Incorrect password';
+        }
     }
   });
   

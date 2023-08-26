@@ -1,16 +1,16 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
     const password = event.queryStringParameters.password;
-    const correctPassword = process.env.PASS;
+    const envPassword = process.env.PASS || "default"; // fallback to "default" if PASS is not set
   
-    if (password === correctPassword) {
+    if (password === envPassword) {
       return {
         statusCode: 200,
-        body: "Correct password",
+        body: JSON.stringify({ status: "success" })
       };
     } else {
       return {
-        statusCode: 401,
-        body: "Incorrect password",
+        statusCode: 403,
+        body: JSON.stringify({ status: "forbidden" })
       };
     }
   };

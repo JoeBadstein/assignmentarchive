@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
           errorMessage.style.display = 'block';
           errorMessage.textContent = 'Incorrect password'+ response.status;
-          alert(response.body);  // Show alert with correct password
+          alert(data.status);  // Show alert with correct password
         }
     }
   });

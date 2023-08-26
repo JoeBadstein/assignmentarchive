@@ -15,7 +15,7 @@ body {
   
 .password-input {
     width: 100%;
-    max-width: 400px;
+    max-width: 200px;
     padding: 15px;
     font-size: 24px;
     border-radius: 12px;
@@ -23,6 +23,8 @@ body {
     box-shadow: 0 0 200px rgba(1,1,1,1);
     transition: all 0.3s ease;
     outline: none;
+    margin: auto;
+    display: block; 
   }
   
 .password-input:focus {
